@@ -2,7 +2,7 @@
   
 For sweeping balances from multiple private keys to one destination wallet, please refer to [this repository][repo-link]
 
-[repo-link]: https://github.com/ELHARAKA
+[repo-link]: https://github.com/ELHARAKA/BatchTronAutoSweep
 
 <h1>TRX AutoSweep</h1>
 
