@@ -1,3 +1,8 @@
+/*
+ * Auto-Sweep Script for Tron (TRX)
+ * Developed by Fahd Elharaka
+ */
+
 const TronWeb = require('tronweb');
 
 // Set up TronWeb instance with the desired network
