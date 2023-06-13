@@ -1,6 +1,7 @@
 /**
  * Auto-Sweep Script for Tron (TRX)
  * Developed by Fahd Elharaka
+ * Email: fahd@web3dev.ma / Telegram: @Thisiswhosthis
  *
  * DISCLAIMER:
  * 
