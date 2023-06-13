@@ -1,6 +1,14 @@
-/*
+/**
  * Auto-Sweep Script for Tron (TRX)
  * Developed by Fahd Elharaka
+ *
+ * DISCLAIMER:
+ * 
+ * This script is provided for educational and informational purposes only.
+ * It is not intended for any illegal or unauthorized activities. 
+ * 
+ * The developer of this script shall not be responsible for any misuse or damage caused by the use of this script.
+ * Use this script at your own risk and responsibility.
  */
 
 const TronWeb = require('tronweb');
