@@ -1,3 +1,9 @@
+<h2>IMPORTANT NOTE<h2>
+  
+For sweeping balances from multiple private keys to one destination wallet, please refer to [this repository][repo-link]
+
+[repo-link]: https://github.com/ELHARAKA
+
 <h1>TRX AutoSweep</h1>
 
 <p>TRX AutoSweep is a script written in JavaScript that allows for the automatic sweeping of TRX (Tron) funds from a source wallet to a destination wallet. It utilizes the TronWeb library to interact with the Tron blockchain.</p>
