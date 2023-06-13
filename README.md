@@ -1,6 +1,6 @@
-<h1>Tron Auto-Sweep</h1>
+<h1>TRX AutoSweep</h1>
 
-<p>Tron Auto-Sweep is a script written in JavaScript that allows for the automatic sweeping of TRX (Tron) funds from a source wallet to a destination wallet. It utilizes the TronWeb library to interact with the Tron blockchain.</p>
+<p>TRX AutoSweep is a script written in JavaScript that allows for the automatic sweeping of TRX (Tron) funds from a source wallet to a destination wallet. It utilizes the TronWeb library to interact with the Tron blockchain.</p>
 
 <h2>Features</h2>
 
@@ -46,7 +46,7 @@
 
 <h2>Disclaimer</h2>
 
-<p>Please note that the use of this script is at your own risk. Ensure that you have proper authorization and adhere to all legal and regulatory requirements when using it to manage Tron wallets and transfer funds.</p>
+<p>Please note that the use of this script is at your own risk. Ensure that you have proper authorization and adhere to all legal and regulatory requirements when using it to manage TRX wallets and transfer funds.</p>
 
 <h2>Acknowledgments</h2>
 
