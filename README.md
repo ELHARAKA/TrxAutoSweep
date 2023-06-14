@@ -28,7 +28,7 @@ For sweeping balances from multiple private keys to one destination wallet, plea
 <ol>
   <li>Clone the repository and navigate to the project directory.</li>
   <li>Install the required dependencies by running the following command:<br>
-    <code>npm install</code></li>
+    <code>npm install tronweb</code></li>
   <li>Modify the <code>YOUR_PRIVATE_KEY</code> and <code>SOURCE_ADDRESS</code> variables in the <code>auto-sweep.js</code> file with your desired values.</li>
   <li>Modify the <code>DESTINATION_ADDRESS</code> variable in the <code>auto-sweep.js</code> file to set your desired destination wallet address.</li>
   <li>Run the script using the following command:<br>
