@@ -11,7 +11,7 @@ For sweeping balances from multiple private keys to one destination wallet, plea
 <h2>Features</h2>
 
 <ul>
-  <li>Checks the available balance of the source wallet address.</li>
+  <li>Checks the available balance of a wallet address.</li>
   <li>Transfers the funds to the specified destination wallet if there are available funds.</li>
   <li>Periodically performs the auto-sweeping process at regular intervals.</li>
 </ul>
