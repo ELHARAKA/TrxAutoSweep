@@ -1,4 +1,4 @@
-<h2>IMPORTANT NOTE<h2>
+<h2>Note<h2>
   
 For sweeping balances from multiple private keys to one destination wallet, please refer to [this repository][repo-link]
 
@@ -26,21 +26,10 @@ For sweeping balances from multiple private keys to one destination wallet, plea
 <h2>Getting Started</h2>
 
 <ol>
-  <li>Clone the repository and navigate to the project directory.</li>
-  <li>Install the required dependencies by running the following command:<br>
-    <code>npm install tronweb</code></li>
-  <li>Modify the <code>YOUR_PRIVATE_KEY</code> and <code>SOURCE_ADDRESS</code> variables in the <code>auto-sweep.js</code> file with your desired values.</li>
-  <li>Modify the <code>DESTINATION_ADDRESS</code> variable in the <code>auto-sweep.js</code> file to set your desired destination wallet address.</li>
-  <li>Run the script using the following command:<br>
-    <code>node auto-sweep.js</code></li>
+  <li>Install tronweb: <code>npm install tronweb</code></li>
+  <li>Modify the <code>YOUR_PRIVATE_KEY</code>, <code>SOURCE_ADDRESS</code> and <code>DESTINATION_ADDRESS</code> variables in the <code>auto-sweep.js</code> file with your desired values.</li>
+  <li>Run: <code>node auto-sweep.js</code></li>
 </ol>
-
-<h2>Configuration</h2>
-
-<ul>
-  <li>Modify the Tron network endpoint in the TronWeb instance setup to use the desired Tron network.</li>
-  <li>Adjust the interval duration in the <code>setInterval</code> function to change the frequency of auto-sweeping.</li>
-</ul>
 
 <h2>Contributing</h2>
 
