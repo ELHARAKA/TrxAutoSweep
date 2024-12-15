@@ -1,5 +1,5 @@
 /**
- * Auto-Sweep Script for Tron (TRX)
+ * Auto-Sweep v2 Script for Tron (TRX)
  * Developed by Fahd Elharaka
  * Email: fahd@web3dev.ma / Telegram: @Thisiswhosthis
  *
@@ -12,30 +12,31 @@
  * Use this script at your own risk and responsibility.
  */
 
-const TronWeb = require('tronweb');
+const TronWeb = require('tronweb').TronWeb
 
-// Set up TronWeb instance with the desired network
 const tronWeb = new TronWeb({
-  fullHost: 'https://api.trongrid.io', // Use the desired Tron network endpoint
-  privateKey: 'YOUR_PRIVATE_KEY' // Private key of the source wallet
+  fullHost: 'https://api.trongrid.io',
+  privateKey: 'YOUR_PRIVATE_KEY'
 });
 
-const sourceAddress = 'SOURCE_ADDRESS'; // Source wallet address
-const destinationAddress = 'DESTINATION_ADDRESS'; // Destination wallet address
+const sourceAddress = 'SOURCE_ADDRESS';
+const destinationAddress = 'DESTINATION_ADDRESS';
 
 async function getBalance(address) {
   try {
-    const balance = await tronWeb.trx.getBalance(address);
-    return balance;
+    const balanceInSun = await tronWeb.trx.getBalance(address);
+    const balanceInTRX = balanceInSun / 1_000_000;
+    return balanceInTRX;
   } catch (error) {
     console.error('Error retrieving balance:', error);
     throw error;
   }
 }
 
-async function sendTransaction(from, to, amount) {
+async function sendTransaction(from, to, amountInTRX) {
   try {
-    const transaction = await tronWeb.transactionBuilder.sendTrx(to, amount, from);
+    const amountInSun = amountInTRX * 1_000_000;
+    const transaction = await tronWeb.transactionBuilder.sendTrx(to, amountInSun, from);
     const signedTransaction = await tronWeb.trx.sign(transaction);
     const result = await tronWeb.trx.sendRawTransaction(signedTransaction);
     return result;
@@ -49,19 +50,16 @@ async function autoSweep() {
   try {
     const currentBalance = await getBalance(sourceAddress);
 
-    if (currentBalance > 0) {
-      console.log(`Available funds detected in the source address: ${currentBalance} TRX`);
-
-      // Transfer funds to the destination address
+    if (currentBalance > 1) {
+      console.log(`Current balance: ${currentBalance.toFixed(6)} TRX. Proceeding with transfer...`);
       const result = await sendTransaction(sourceAddress, destinationAddress, currentBalance);
-      console.log(`Transferred ${currentBalance} TRX to ${destinationAddress}. Transaction ID: ${result.txid}`);
+      console.log(`Transferred ${currentBalance.toFixed(6)} TRX to ${destinationAddress}. Transaction ID: ${result.txid}`);
     } else {
-      console.log('No available funds detected in the source address.');
+      console.log(`Current balance: ${currentBalance.toFixed(6)} TRX. No action taken (balance ≤ 1 TRX).`);
     }
   } catch (error) {
-    console.error('Auto-sweeping error:', error);
+    console.error('Auto-sweep error:', error);
   }
 }
 
-// Run autoSweep every 60 seconds
 setInterval(autoSweep, 60000);
